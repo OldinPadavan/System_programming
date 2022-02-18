@@ -50,6 +50,35 @@ class excavator {
     int driver_seat_count;
     string vendor;
     string model_name;
+
+public:
+    excavator(double weight, double max_lift_weight, int driver_seat_cout, string vendor, string model_name) {
+        this->weight = weight;
+        this->max_lift_weight = max_lift_weight;
+        this->driver_seat_count = driver_seat_cout;
+        this->vendor = vendor;
+        this->model_name = model_name;
+    }
+    excavator() {
+        weight = 3000.0;
+        max_lift_weight = 1500.0;
+        int driver_seat_count = 2;
+        model_name = "309 CR VAB";
+        vendor = "Caterpillarr";
+    }
+
+    double getWeight() {
+        return weight;
+    }
+
+    double getMax_lift_weight() {
+        return max_lift_weight;
+    }
+
+    void ShowModelNameAndVendor() {
+        cout << "model: "<< model_name << endl;
+        cout << "vendor: " << vendor << endl;
+    }
 };
 
 class crane {
@@ -58,6 +87,39 @@ class crane {
     double weight;
     string vendor;
     string model_name;
+
+public:
+    crane(double max_lift_weight, double height, double weight, string vendor, string model_name) {
+        this->max_lift_weight = max_lift_weight;
+        this->height = height;
+        this->weight = weight;
+        this->vendor = vendor;
+        this->model_name = model_name;
+    }
+    crane() {
+        max_lift_weight = 5000.0;
+        height = 3000.0;
+        weight = 7000.0;
+        vendor = "Liebherr";
+        model_name = "132EC-H8 Litronic";
+    }
+
+    double getWeight() {
+        return weight;
+    }
+
+    double getMax_lift_weight() {
+        return max_lift_weight;
+    }
+
+    double getHeight() {
+        return height;
+    }
+
+    void ShowModelNameAndVendor() {
+        cout << "model: " << model_name << endl;
+        cout << "vendor: " << vendor << endl;
+    }
 };
 
 class paver /*асфальтоукладчик*/ {
