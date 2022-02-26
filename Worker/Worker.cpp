@@ -14,11 +14,11 @@ class Worker {
 public:
     int age;
     string name;
-    int mood_rate;
 
     Worker() {
         cin >> age;
         cin >> name;
+        weight = 0;
         setMood_byDefault();
     }
 
@@ -26,11 +26,18 @@ public:
         cout << this->age << endl;
         cout << this->name << endl;
         cout << this->get_weight() << endl;
+        cout << this->mood << endl;
     }
 
     void eating(float input_meal);
     float get_weight();
+    void set_Mood(int input_mood_rait);
     void setMood_byDefault();
+    void walking();
+    void dancing();
+    void working();
+
+
 
 private:
     float weight;
@@ -48,22 +55,57 @@ void Worker::eating(float input_meal) {
 void Worker::setMood_byDefault() {
     mood = 10;
 }
+void Worker::set_Mood(int input_mood_rait) {
+    mood = mood + input_mood_rait;
+    if (mood <= 0) {
+        mood = 1;
+    }
+}
 float Worker::get_weight() {
     return weight;
 }
 
+void Worker::walking() {
+    set_Mood(1);
+}
+
+void Worker::dancing() {
+    set_Mood(2);
+}
+
+void Worker::working() {
+    set_Mood(-2);
+}
 int main()
 {
     setlocale(LC_ALL, "");
     Worker *worker1 = new Worker();
+    worker1->showFields();
+    cout << endl;
     worker1->age = 34;
     worker1->name = "Иванов";
     worker1->showFields();
-
+    cout << endl;
     worker1->eating(5.0);
     worker1->eating(3.0);
     worker1->showFields();
+    cout << endl;
     worker1->eating(15.0);
+    worker1->showFields();
+    cout << endl;
+    worker1->eating(3.0);
+    worker1->walking();
+    worker1->walking();
+    worker1->dancing();
+    worker1->dancing();
+    worker1->dancing();
+    
+    worker1->showFields();
+    cout << endl;
+    for (int i = 1; i <= 9; i++) {
+        worker1->working();
+    }
+
     worker1->showFields();
     
 
