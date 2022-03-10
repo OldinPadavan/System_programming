@@ -28,14 +28,24 @@ public :
         base = findBase(side, base_angle);
     }
 
-    void setSide(double new_side) {
+    bool setSide(double new_side) {
         if (new_side > 0) {
             side = new_side;
+            return true;
+        }
+        else {
+            cout << "Input value error" << endl;
+            return false;
         }
     }
-    void setAge(double new_age) {
+    bool setAge(double new_age) {
         if (new_age > 0) {
             base_angle = new_age;
+            return true;
+        }
+        else {
+            cout << "Input value error" << endl;
+            return false;
         }
     }
 
