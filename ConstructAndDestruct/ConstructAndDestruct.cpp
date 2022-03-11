@@ -2,6 +2,37 @@
 //
 
 #include <iostream>
+#include <string>
+
+using namespace std;
+
+class MyString
+{
+public:
+    MyString();
+    MyString(string input_string);
+    ~MyString();
+private:
+    string storage_value;
+    int string_length = storage_value.length();
+    bool IsAlphabet(char ch);
+    string RemoveAllNumbers(string checking_string);
+};
+
+MyString::MyString()
+{
+    storage_value = "default string";
+}
+MyString::MyString(string input_string)
+{
+    if (input_string.length() > 10) {
+
+   }
+}
+MyString::~MyString()
+{
+   
+}
 
 int main()
 {
