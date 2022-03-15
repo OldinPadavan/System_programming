@@ -11,17 +11,23 @@ class MyString
 public:
     MyString();
     MyString(string input_string);
+    MyString(const MyString &old_string);
     ~MyString();
 private:
-    string storage_value;
-    int string_length = storage_value.length();
+    int string_lenght;
+    char* my_string = new char[string_lenght];
     bool IsAlphabet(char ch);
     string RemoveAllNumbers(string checking_string);
 };
 
 MyString::MyString()
 {
-    storage_value = "default string";
+    string default_string = "default string";
+    string_lenght = default_string.length();
+    my_string = new char(string_lenght);
+    for (int i = 0; i < string_lenght; i++) {
+        my_string[i] = default_string[i];
+    }
 }
 MyString::MyString(string input_string)
 {
