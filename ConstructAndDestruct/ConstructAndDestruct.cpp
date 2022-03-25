@@ -21,24 +21,21 @@ public:
     void print();
 private:
     int string_lenght;
-    char my_string[];
+    char *my_string;
     string RemoveAllNumbers();
 };
 
 MyString::MyString()
 {
     cout << "Вызван конструктор с параметрами по умолчанию" << endl;
-    string default_string = "default string";
-    this->string_lenght = default_string.length() + 1;
-    my_string[string_lenght];
-    strcpy(my_string, default_string.c_str());
+    char letters [] = "defoult string";
+    my_string = letters;
 }
 MyString::MyString(string input_string)
 {   
     cout << "Вызван конструток принимающий значение строки" << endl;
-     this->string_lenght = input_string.length() + 1;
-     my_string[string_lenght];
-     strcpy(this->my_string, input_string.c_str());
+    my_string = new char [input_string.length() + 1];
+    strcpy(my_string, input_string.c_str());
  
 }
 MyString::MyString(const MyString& old_string) {
@@ -85,9 +82,7 @@ void MyString::update() {
 }
 void MyString::print() {
     cout << "Вызван метод для печати текущей строки" << endl;
-    for (int i = 0; i < string_lenght; i++) {
-        cout << my_string[i];
-    }
+    cout << my_string << endl;
     cout << endl;
 
 }
@@ -101,6 +96,8 @@ int main()
     string1.print();
     //string2.print();
     //string3.print();
+
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
