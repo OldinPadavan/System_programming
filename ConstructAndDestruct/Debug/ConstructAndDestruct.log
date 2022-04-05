@@ -1,3 +1,8 @@
 ﻿  ConstructAndDestruct.cpp
+<<<<<<< HEAD
 G:\Учеба второй курс\C++ projects\ConstructAndDestruct\ConstructAndDestruct.cpp(82,27): warning C4018: <: несоответствие типов со знаком и без знака
   ConstructAndDestruct.vcxproj -> G:\Учеба второй курс\C++ projects\ConstructAndDestruct\Debug\ConstructAndDestruct.exe
+=======
+D:\C++ projects\ConstructAndDestruct\ConstructAndDestruct.cpp(56,15): warning C4129: d: неизвестная escape-последовательность
+  ConstructAndDestruct.vcxproj -> D:\C++ projects\ConstructAndDestruct\Debug\ConstructAndDestruct.exe
+>>>>>>> b9775818aa38a0321cc48f622509332eae293afb

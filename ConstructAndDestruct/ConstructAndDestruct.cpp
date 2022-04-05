@@ -20,13 +20,18 @@ public:
     void print();
 private:
     int string_lenght;
+<<<<<<< HEAD
     char* my_string;
+=======
+    char *my_string;
+>>>>>>> b9775818aa38a0321cc48f622509332eae293afb
     string RemoveAllNumbers();
 };
 
 MyString::MyString()
 {
     cout << "Вызван конструктор с параметрами по умолчанию" << endl;
+<<<<<<< HEAD
     string default_string = "default string";
     string_lenght = default_string.length();
     my_string = new char[string_lenght];
@@ -42,6 +47,16 @@ MyString::MyString(string input_string)
      for (int i = 0; i < string_lenght; i++) {
          my_string[i] = input_string[i];
      }
+=======
+    char letters [] = "defoult string";
+    my_string = letters;
+}
+MyString::MyString(string input_string)
+{   
+    cout << "Вызван конструток принимающий значение строки" << endl;
+    my_string = new char [input_string.length() + 1];
+    strcpy(my_string, input_string.c_str());
+>>>>>>> b9775818aa38a0321cc48f622509332eae293afb
  
 }
 MyString::MyString(const MyString& old_string) {
@@ -89,9 +104,7 @@ void MyString::update() {
 }
 void MyString::print() {
     cout << "Вызван метод для печати текущей строки" << endl;
-    for (int i = 0; i < string_lenght; i++) {
-        cout << my_string[i];
-    }
+    cout << my_string << endl;
     cout << endl;
 
 }
@@ -103,6 +116,7 @@ int main()
     MyString string2 = MyString("Hello");
     MyString string3 = MyString(string2);   
     string1.print();
+<<<<<<< HEAD
     string2.print();
     string3.print();
     string3.set("ThisIs2TooLong00String948");
@@ -110,6 +124,10 @@ int main()
     string3.update();
     string3.print();
 
+=======
+    //string2.print();
+    //string3.print();
+>>>>>>> b9775818aa38a0321cc48f622509332eae293afb
 
     return 0;
 }
