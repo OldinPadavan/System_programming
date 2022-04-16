@@ -1,3 +1,0 @@
-G:\Учеба второй курс\C++ projects\ConstructAndDestruct\Debug\ConstructAndDestruct.exe
-D:\C++ projects\ConstructAndDestruct\Debug\ConstructAndDestruct.exe
-D:\C++ projects\ConstructAndDestruct\Debug\ConstructAndDestruct.pdb

@@ -1,0 +1,4 @@
+﻿  MyString.cpp
+G:\Учеба второй курс\C++ projects\ConstructAndDestruct\ConstructAndDestruct\MyString.cpp(14,34): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+G:\Учеба второй курс\C++ projects\ConstructAndDestruct\ConstructAndDestruct\MyString.cpp(35,42): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  ConstructAndDestruct.vcxproj -> G:\Учеба второй курс\C++ projects\ConstructAndDestruct\x64\Debug\ConstructAndDestruct.exe

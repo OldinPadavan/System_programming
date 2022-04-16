@@ -1,5 +1,0 @@
-﻿  ConstructAndDestruct.cpp
-G:\Учеба второй курс\C++ projects\ConstructAndDestruct\ConstructAndDestruct.cpp(51,1): error C2084: функция "MyString::MyString(std::string)" уже имеет текст реализации
-G:\Учеба второй курс\C++ projects\ConstructAndDestruct\ConstructAndDestruct.cpp(41): message : см. предыдущее определение "{ctor}"
-G:\Учеба второй курс\C++ projects\ConstructAndDestruct\ConstructAndDestruct.cpp(93,27): warning C4018: <: несоответствие типов со знаком и без знака
-G:\Учеба второй курс\C++ projects\ConstructAndDestruct\ConstructAndDestruct.cpp(112,40): error C2264: MyString::MyString: ошибка в определении или объявлении функции; функция не вызвана
