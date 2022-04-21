@@ -13,16 +13,18 @@
 
 int main()
 {
-    Worker workers[5];
-    workers[0] = Worker();
-    workers[1] = Director();
-    workers[2] = FilmDirector();
-    workers[3] = FeatureFilmDirector();
-    workers[4] = DocumentaryFilmDirector();
+	Worker newWorker = Worker();
+	newWorker.showInfo();
+	Director newDirector = Director();
+	newDirector.showInfo();
+	FilmDirector newFilmDirector = FilmDirector();
+	newFilmDirector.showInfo();
+	DocumentaryFilmDirector newDocumentaryFilmDirector = DocumentaryFilmDirector();
+	newDocumentaryFilmDirector.showInfo();
+	FeatureFilmDirector newFeatureFilmDirector = FeatureFilmDirector();
+	newFeatureFilmDirector.showInfo();
 
-    for (int i = 0; i < 5; i++) {
-        workers[i].showInfo();
-    }
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
