@@ -26,14 +26,27 @@ int main()
     
     
     double minimalPerimeter = 0;
+    Quadrangle minPerimeter;
     for (int i = 0; i < quadrangleCount; i++) {
         if (i == 0) {
-            minimalPerimeter = quadrangleList->calcPerimetre();
+            minimalPerimeter = quadrangleList[0].calcPerimetre();
+        }
+        if (minimalPerimeter > quadrangleList[i].calcPerimetre()) {
+            minimalPerimeter = quadrangleList[i].calcPerimetre();
+            minPerimeter = quadrangleList[i];
         }
        
     }
-    double averageSquare = 0;
-    
+    cout << "Наименьший периметер равен = " << minimalPerimeter << endl;
+    cout << "Самый маленький четырехугольник = ";
+    minPerimeter.showInfo();
+
+    long averageSquare = 0;
+    for (int i = 0; i < rhombusCount; i++) {
+        averageSquare += rhombusList[i].calcSquare();
+    }
+    cout << "Средняя площадь ромбов = ";
+    cout << averageSquare / rhombusCount << endl;
 
     
     
